@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bpmn-agent-memory"
+version = "0.1.0"
+description = "Modular BPMN semantic memory system for AI agents using neo4j-agent-memory"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    {name = "BPMN Agent Developer", email = "dev@example.com"}
+]
+license = {text = "Apache-2.0"}
+
+dependencies = [
+    "neo4j-agent-memory>=0.5.0",
+    "sentence-transformers>=2.2.0",
+    "pydantic>=2.0",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0",
+    "ruff>=0.1.0",
+]
+
+[tool.setuptools]
+packages = ["bpmn_memory"]
